@@ -1,13 +1,14 @@
 ## URL Shortener
 
-    Note: This is a hypothetical problem
+> Note: this is a hypothetical problem
+---
     
-#### Let's create a [URL Shortener](https://en.wikipedia.org/wiki/URL_shortening)!
+### Let's create a [URL Shortener](https://en.wikipedia.org/wiki/URL_shortening)!
 
 After extensive research, AlphaSight's Product team figured out that we can greatly improve our relationship with our 
 clients if the links we share with them are shorter because it would make it easier for them to share those links.
  
-### Main Goal: to shorten a URL to an AlphaSights equivalent
+#### Main Goal: to shorten a URL to an AlphaSights equivalent
 
 Here are the features we expect from our shortener [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product)
 
@@ -25,7 +26,7 @@ Follow the instructions in our [main README](../README.md) to send your challeng
 Although it's not required, completing bonus points will help us to better understand your level of knowledge across the multiple
 disciplines. 
 
-If you decide to go for any of the bonus, you'll be evaluated under the same criteria of the main goal.   
+> If you decide to go for any of the bonus, you'll be evaluated under the same criteria of the main goal.   
 
 Chose one or more of:
 
