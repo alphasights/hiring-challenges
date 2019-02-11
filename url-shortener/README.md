@@ -1,7 +1,6 @@
 ## URL Shortener
 
 > Note: this is a hypothetical problem
----
     
 ### Let's create a [URL Shortener](https://en.wikipedia.org/wiki/URL_shortening)!
 
