@@ -1,9 +1,10 @@
-# AlphaSights Hiring Challenges
+## AlphaSights Hiring Challenges
+
+# WORK IN PROGRESS
 
 Hello :wave:
 
-This repo contains the challenges for candidates. The challenges relate to the domains that
-we work primarily with like backend, frontend and machine learning!
+This repo contains challenges related to the domains that we work primarily with like backend, frontend and machine learning!
 
 The expectation from candidates are the same for any dev team with passion for coding:
 - [x] You understand the problem and follow the requirements and coding instructions given.
