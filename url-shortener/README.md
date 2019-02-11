@@ -30,10 +30,10 @@ disciplines.
 
 Chose one or more of:
 
-    • create an interface for the application that our admins can use to see the list of shortened URLs and their original links
-    • save and show utilization stats 
-    • enable to run our application in containers
-    • create a Service exposing the functionalities of this app 
+* create an interface for the application that our admins can use to see the list of shortened URLs and their original links
+* save and show utilization stats 
+* enable to run our application in containers
+* create a Service exposing the functionalities of this app 
 
 
 
