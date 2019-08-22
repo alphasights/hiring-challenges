@@ -1,0 +1,44 @@
+group 'io.javalin' // your group id
+version '1.0-SNAPSHOT'
+
+// https://github.com/tehlers/gradle-download-dependencies-plugin
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'net.idlestate:gradle-download-dependencies-plugin:1.+'
+    }
+}
+
+apply plugin: 'net.idlestate.download-dependencies'
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile 'io.javalin:javalin:3.4.1'
+    compile 'org.slf4j:slf4j-simple:1.7.26'
+    testCompile 'io.rest-assured:rest-assured:4.0.0'
+    testCompile 'junit:junit:4.12'
+}
+
+jar {
+    manifest {
+       attributes(
+          'Class-Path': configurations.compile.files.collect {"$it.name"}.join(' '),
+          'Main-Class': 'com.alphasights.shortener.UrlShortener'
+          )
+        }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
