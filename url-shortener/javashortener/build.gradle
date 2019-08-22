@@ -31,6 +31,11 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
+task startApp(type:Exec) {
+    workingDir '.'
+    commandLine 'java', '-jar', 'build/libs/javashortener-1.0-SNAPSHOT.jar'
+}
+
 sourceSets {
     main.java.srcDirs += 'src/main/java'
     test.java.srcDirs += 'src/test/java'

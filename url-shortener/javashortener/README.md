@@ -2,14 +2,20 @@
 
 After extensive research, AlphaSight's Product team figured out that we can significantly improve our relationship with our clients if the links we share with them are shorter because it would make it easier for them to share those links.
 
-## Installing wrapper
-gradle wrapper --gradle-version=5.6 --distribution-type=bin
+## Installing graddle
+
+### Installing sdk - https://sdkman.io/install
+* curl -s "https://get.sdkman.io" | bash # or zsh
+* source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+### Installing gradle 5.6
+sdk install gradle 5.6
 
 ## Building
-./gradlew assemble
+gradle assemble
 
 ## Running the application
-java -jar build/libs/javashortener-1.0-SNAPSHOT.jar
+gradle startApp
 
 ## Running the tests
-./gradlew test
+gradle test
