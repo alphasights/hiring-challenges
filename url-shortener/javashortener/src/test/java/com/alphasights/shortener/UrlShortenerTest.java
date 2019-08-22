@@ -9,8 +9,8 @@ public class UrlShortenerTest {
 
     @Test
     public void testHomeRespondsWith200() {
-        RestAssured.baseURI  = "http://localhost:7000"; 
- 
+        RestAssured.baseURI  = "http://localhost:7000";
+
         RestAssured.given()
             .when()
                 .get("/")
