@@ -3,13 +3,13 @@ from flask import (
     render_template,
     request,
     jsonify,
-    redirect
+    redirect,
+    abort
 )
 
-from models import URI
+from models import URL
 from repositories import repo
 
-URLS = {}
 
 # Create the application instance
 app = Flask(__name__, template_folder="templates")
@@ -25,18 +25,36 @@ def home():
 def shorten():
     original_url = request.json.get('url')
 
-    uri = URI(original_url)
+    url = URL(original_url)
 
-    repo.create(uri)
+    repo.create(url)
 
-    return jsonify({'short_url': uri.shrink()})
+    return jsonify({'short_url': url.shrink()})
 
 
-@app.route('/<path:path>')
+@app.route('/list')
+def shortened_urls():
+    urls_as_dicts = [url.to_dict() for url in repo.all()]
+
+    return jsonify(urls_as_dicts)
+
+
+# noinspection SpellCheckingInspection
+@app.route('/<path:path>', methods=['GET'])
 def redir(path):
-    uri = repo.find(path)
+    urls = repo.find(path)
 
-    return redirect(uri.url)
+    if urls:
+        return redirect(urls[0].original)
+
+    return abort(404)
+
+
+@app.route('/<path:path>', methods=['DELETE'])
+def delete(path):
+    url = repo.find(path)[0]
+    repo.delete(url)
+    return ''
 
 
 # If we're running in stand alone mode, run the application
