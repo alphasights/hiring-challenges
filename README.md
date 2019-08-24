@@ -1,7 +1,5 @@
 ## AlphaSights Hiring Challenges
 
-# WORK IN PROGRESS
-
 Hello :wave:
 
 This repo contains challenges related to the domains that we work primarily with like backend, frontend and machine learning!
